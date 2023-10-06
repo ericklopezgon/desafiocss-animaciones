@@ -2,3 +2,72 @@
     padding: 0;
     margin: 0;
 }
+
+/* -----Mobile first----- */
+
+/* Layout */
+
+.grid-layout {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    grid-template-rows: 80px 60px 1fr 80px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "main"
+    "footer"
+    ;
+}
+
+/* Barra de navegacion */
+nav {
+    grid-area: nav;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+.menu img {
+    width: 40px;
+}
+
+/* Apartado buscar */
+header {
+    grid-area: header;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filters {
+    width: 200px;
+    background-color: white;
+}
+
+/* Grilla de imagenes */
+main {
+    grid-area: main;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: gray;
+}
+
+/* ------Tablet (576-998px)----- */
+
+/* -----Desktop (998px+)----- */
+
