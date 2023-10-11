@@ -50,12 +50,16 @@ nav {
     width: 150px;
 }
 
-.menu {
+.menu-mobile {
     display: flex;
     justify-content: center;
 }
-.menu img {
+.menu-mobile img {
     width: 40px;
+}
+
+.menu-desktop {
+    display: none;
 }
 
 /* Apartado buscar */
@@ -96,12 +100,19 @@ main {
     justify-content: center;
     height: fit-content;
     background-color: rgb(255, 255, 255);
-    border: solid black 1px;
     width: 350px;
+    box-shadow: 0 0 10px rgb(155, 154, 154);
 }
 
 .card-container .card img {
     width: 200px;
+}
+
+.card button {
+    background-color: rgb(15, 92, 15);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .navigation {
@@ -127,6 +138,7 @@ footer {
 .logof {
     display: flex;
     align-items: center;
+    padding-left: 10px;
 }
 
 .logof h5 {
@@ -137,10 +149,90 @@ footer {
     width: 100px;
 }
 
+.rrss {
+    padding-right: 10px;
+}
+
 .rrss img {
 width: 30px;
 }
 
 
 /* -----Desktop (998px+)----- */
+/* Grid desktop */
 
+@media (min-width: 576px) {
+    .grid-layout {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+        grid-template-rows: 60px 1fr 60px;
+        grid-template-areas: 
+            "nav header"
+            "nav main"
+            "nav footer"
+            ;
+    }
+}
+
+/* Menu de navegacion  */
+
+@media (min-width: 576px) {
+    nav .menu-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 576px) {
+    .logo img {
+        width: 80px;
+    }
+}
+
+@media (min-width: 576px) {
+    .logo h5 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 576px) {
+    nav .menu-desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Grilla */
+
+@media (min-width: 576px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+    }
+
+@media (min-width: 576px) {
+    .card {
+        align-self: normal;
+    }
+}
+
+@media (min-width: 576px) {
+    .card img {
+        height: 300px;
+    }
+}
