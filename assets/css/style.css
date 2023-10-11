@@ -125,7 +125,6 @@ main {
 
 .card button:hover {
     background-color: goldenrod;
-    scale: 1.1;
     color: black;
 }
 
